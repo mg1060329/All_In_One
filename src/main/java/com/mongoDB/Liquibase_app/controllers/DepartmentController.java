@@ -2,7 +2,7 @@ package com.mongoDB.Liquibase_app.controllers;
 
 import com.mongoDB.Liquibase_app.dto.DepartmentRequestDto;
 import com.mongoDB.Liquibase_app.dto.DepartmentResponseDto;
-import com.mongoDB.Liquibase_app.services.impl.DepartmentServiceImpl;
+import com.mongoDB.Liquibase_app.services.DepartmentService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,10 +13,10 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/departments")
+@RequestMapping("/departments")
 public class DepartmentController {
 
-    private final DepartmentServiceImpl departmentService;
+    private final DepartmentService departmentService;
 
 
     // CREATE
