@@ -2,7 +2,7 @@ package com.mongoDB.Liquibase_app.controllers;
 
 import com.mongoDB.Liquibase_app.dto.DepartmentRequestDto;
 import com.mongoDB.Liquibase_app.dto.DepartmentResponseDto;
-import com.mongoDB.Liquibase_app.services.DepartmentService;
+import com.mongoDB.Liquibase_app.service.DepartmentService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

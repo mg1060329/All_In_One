@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: Liquibase-app
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/liquibase_db
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    url: mongodb://localhost:27017/liquibase_db
+    driver: liquibase.ext.mongodb.database.MongoClientDriver
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://test.retax.in/realms/SpringBoot
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
