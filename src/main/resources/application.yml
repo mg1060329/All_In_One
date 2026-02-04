@@ -9,6 +9,12 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/liquibase_db
 
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+
   liquibase:
     enabled: true
     change-log: classpath:db/changelog/db.changelog-master.yaml
@@ -21,8 +27,19 @@ spring:
         jwt:
           issuer-uri: https://test.retax.in/realms/SpringBoot
 
+keycloak:
+  admin:
+    server-url: https://test.retax.in
+    realm: master
+    username: admin
+    password: ${KEYCLOAK_ADMIN_PASSWORD:}
+    client-id: admin-cli
+    app-realm: SpringBoot
+
+  client:
+    id: springboot-client
+    secret: SEXEbPP2t4GfWg59fWgrB5H9EDBUN7KX
+
 springdoc:
-  api-docs:
-    path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
